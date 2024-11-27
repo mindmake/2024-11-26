@@ -7,8 +7,8 @@
 <title>Insert title here</title>
 </head>
 <body>
-p40<br>
-<form action="calcResult.jsp"  method="post">
+p51<br>
+<form action="makeResult"  method="post">
 	<input type="number" name="num1"> 
 	<input type="number" name="num2">
 	<button type="submit">SEND</button>
