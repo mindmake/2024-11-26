@@ -14,12 +14,14 @@ public class TodoModiFy extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		/*equest.getAttribute("tno");*/
 		//1.글번호 읽기
-				Long tno=Long.parseLong(request.getParameter("tno"));
-				//2.글번호 내용조회
-				TodoService service = new TodoService();
-				//3.조회된 내용 실어서 화면 열기
-				request.setAttribute("dto", service.get(tno));
-				request.getRequestDispatcher("/WEB-INF/todo/modify.jsp").forward(request, response);
+		Long tno=Long.parseLong(request.getParameter("tno"));
+		
+		//2.글번호 내용조회
+		TodoService service = new TodoService();
+		
+		//3.조회된 내용 실어서 화면 열기
+		request.setAttribute("dto", service.get(tno));
+		request.getRequestDispatcher("/WEB-INF/todo/modify.jsp").forward(request, response);
 		
 				
 	}
