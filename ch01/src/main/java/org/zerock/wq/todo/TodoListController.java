@@ -17,7 +17,7 @@ public class TodoListController extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		System.out.println("할일 목록 요청");
 		TodoService service = new TodoService();
-		List<TodoDTO> dolist = service.getList(); //화면목록을 list이름으로 보내라
+		List<TodoDTO> dolist = service.getList(); //화면목록을 dolist이름으로 보내라
 		System.out.println("TodoList"+dolist);
 		
 		request.setAttribute("list",dolist);
@@ -25,7 +25,7 @@ public class TodoListController extends HttpServlet {
 		request.getRequestDispatcher("/WEB-INF/todo/list.jsp").forward(request, response);
 		
 	}
-
+	
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		doGet(request, response);
 		

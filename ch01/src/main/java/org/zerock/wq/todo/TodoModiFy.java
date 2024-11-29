@@ -15,12 +15,14 @@ public class TodoModiFy extends HttpServlet {
 		/*equest.getAttribute("tno");*/
 		//1.글번호 읽기
 		Long tno=Long.parseLong(request.getParameter("tno"));
+		Long readview=Long.parseLong(request.getParameter("readview"));
 		
 		//2.글번호 내용조회
 		TodoService service = new TodoService();
 		
 		//3.조회된 내용 실어서 화면 열기
 		request.setAttribute("dto", service.get(tno));
+		request.setAttribute("readview", service.get(readview));
 		request.getRequestDispatcher("/WEB-INF/todo/modify.jsp").forward(request, response);
 		
 				

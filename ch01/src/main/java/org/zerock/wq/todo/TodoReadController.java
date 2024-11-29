@@ -23,6 +23,7 @@ public class TodoReadController extends HttpServlet {
 		 
 		//3.조회된 내용을 보내면서 해당페이지 열기
 		request.setAttribute("dto", dto);
+		request.setAttribute("read", dto);
 		request.getRequestDispatcher("/WEB-INF/todo/read.jsp").forward(request, response);
 				
 	}

@@ -7,13 +7,15 @@
 <title>Insert title here</title>
 </head>
 <body>
-<%-- 	<c:forEach items="${read}">
-	글 번호 <input type="text" value="${param.tno}"> <br>
-	할일 <input type="text" value="${param.title}"> <br>
-	날짜 <input type="text" value="${param.dueDate}">  <br>
-	완료여부  <input type="text" value="${param.finished}"> <br>
+	<c:forEach items="${readview}"> <!-- 의미 없음 -->
+	글 번호 <input type="text" value="${readview.tno}"> <br>
+	할일 <input type="text" value="${readview.title}"> <br>
+	날짜 <input type="text" value="${readview.dueDate}">  <br>
+	완료여부  <input type="text" value="${readview.finished}"> <br>
 	<button type="submit" >수정하기</button>	 <button type="submit" >삭제하기</button>	
-	</c:forEach>	 --%>
+	</c:forEach> <!-- 의미 없음 -->
+	
+	<hr>
 	글 번호 ${dto.tno} <br> 
 	할일 <input type="text" value="${dto.title}"> <br>
 	날짜 <input type="text" value="${dto.dueDate}"> <br>
